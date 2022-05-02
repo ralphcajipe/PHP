@@ -1,3 +1,5 @@
+<!--Resume-->
+
 <html lang="en">
 
 <head>
@@ -98,10 +100,10 @@ $responsibility <br>";
 echo "<br>";
 $course = "&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; COURSE EXPERIENCE";
 
-$cs50 = "&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Harvard's CS50 (CS50x,Python)
+$cs50 = "&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Harvard's CS50 (CS50x, Python)
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Online OpenCourseWare";
+&emsp; &emsp; &emsp; &emsp; &nbsp; &emsp;Online OpenCourseWare";
 
 $student = "&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Student
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  
@@ -126,6 +128,34 @@ $line <br>
 echo "<b>$cs50</b> <br>
 <i>$student</i> <br>
 $xp <br>";
+
+// VOLUNTEER EXPERIENCE variables
+echo "<br>";
+$lead = "&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; VOLUNTEER EXPERIENCE";
+
+$omdena = "&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Omdena Philippines Chaper
+&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
+&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
+&nbsp; Philippines";
+
+$ml = "&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Machine Learning Engineer
+&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  
+&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
+&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; June 2021 - Present";
+
+$xp_omdena = "&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; •&emsp;
+Collaborated with over 100 individuals in Omdena Philippines chapter's first project entitled, <br>
+&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; Increasing Renewable Energy Access in Philippines through AI.
+";
+
+// Print out Volunteer Experience
+echo "<b>$lead<br>
+$line <br>
+</b>";
+echo "<b>$omdena</b> <br>
+<i>$ml</i> <br>
+$xp_omdena <br>";
 
 
 // SKILLS & INTERESTS variables
