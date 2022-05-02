@@ -34,6 +34,7 @@ $bscsse = "&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; BS in Computer Science, Sof
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
 &emsp; &emsp; Graduation Date: 2023";
 
+// Print out FEU Tech
 echo "<b>$education<br>
 $line <br>
 </b>";
@@ -53,7 +54,7 @@ $bscs = "&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; BS in Computer Science
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
  SY 2018 - 2019";
 
-
+// Print out WU-P
 echo "<br>";
 echo "<b>$wup</b> <br>
 <i>$bscs</i> <br>
@@ -84,6 +85,7 @@ modeling and design of computer based systems in a way <br>
  that demonstrate comprehension of the tradeoffs involved in design choices and applicable standards. 
 ";
 
+// Print out Work Experience
 echo "<b>$work<br>
 $line <br>
 </b>";
@@ -117,6 +119,7 @@ aimed at improving the clarity, quality, and development time for Python. <br>
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; •&emsp;Experienced using Git and GitHub for version control. <br>
 ";
 
+// Print out Course Experience
 echo "<b>$course<br>
 $line <br>
 </b>";
@@ -136,8 +139,7 @@ $interests = "&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; <b>Interests:</b>
 Artificial Intelligence | Machine Learning | Computer Vision | 
 Natural Language Processing | Speech Recognition | Anime/Manga <br>";
 
-
-
+// Print out Skills & Interests
 echo "<b>$skills_interests<br>
 $line <br>
 </b>";
