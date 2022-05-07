@@ -1,4 +1,5 @@
 <?php
+// Modulo operator
 
 $n1 = 17;
 $n2 = 5;

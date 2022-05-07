@@ -1,4 +1,6 @@
 <?php
+// Subtraction of two numbers
+
 $n1 = 29;
 $n2 = 14;
 $diff = $n1 - $n2;

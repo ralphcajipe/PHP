@@ -1,4 +1,6 @@
 <?php
+// Addition of two numbers
+
 $n1 = 6;
 $n2 = 7;
 $sum = $n1 + $n2;

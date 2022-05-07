@@ -1,4 +1,5 @@
 <?php
+// Division of two numbers
 
 $n1 = 20;
 $n2 = 10;
