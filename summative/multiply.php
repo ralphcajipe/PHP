@@ -1,6 +1,8 @@
-/* This is a PHP web page that will display a multiplication table.
-The table is displayed in a table with a border of 1px.
-The table is 11 rows and 11 columns with alternating color. */
+<!-- 
+    This is a PHP web page that will display a multiplication table.
+    The table is displayed in a table with a border of 1px.
+    The table is 11 rows and 11 columns with alternating color. 
+-->
 
 <html>
 
