@@ -1,44 +1,13 @@
-<!--
-    Create a responsive student registration form using HTML and CSS with PHP scripts to process the form. 
-
-    Student Information:
-        Last Name, First Name, Middle Name field in one line
-        Male or Female gender
-        Date of Birth
-
-    Previous School Information:
-        Name of Previous School Board/Municipality
-        Name of Previous School
-        Last date attended
-        Grade at previous school:
-        language of Instruction: English French Other
-        Reason for Transfer
-
-    Health Information:
-        Medical Conditions (include information on special equipment or medication, if required:)
-        For School Use: Immunization Record provided: Yes No
-
-    Citizenship Information:
-        Birth Country:
-        If Canada, Province of Birth:
-        Country of Citizenship:
-        If student not born in Canada, provide date student entered Canada to live for the first time:
-
-    All user entries from the student registration form will be converted into variables
-
-    In the output, call for the declared variables and do some string formats like name cases and numbers.
-    The output should be in a table format.
-
--->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!--Set a margin for the page -->
     <div style="margin: 45px;">
@@ -46,151 +15,147 @@
         <!--Header called "Student Registration Form"
         Align this to right side of page
     -->
-    <h3 align="right">Student Registration Form</h3>
-    <hr>
+        <h3 align="right">Student Registration Form</h3>
+        <hr>
 
-    <form method="POST" action="student_registration.php">
+        <form method="POST" action="student_registration.php">
 
-        <!--Student Information header enclosed in a box--> 
-        <fieldset>
-            <legend><b>Student Information</b></legend>
+            <!--Student Information header enclosed in a box-->
+            <fieldset>
+                <legend><b>Student Information</b></legend>
 
-        <!--Form fields-->
-        <label>Last Name:</label>
-        <input type="text" name="last_name" placeholder="" required>
+                <!--Form fields-->
+                <label>Last Name:</label>
+                <input type="text" name="last_name" placeholder="" required>
 
-        <label>First Name:</label>
-        <input type="text" name="first_name" placeholder="" required>
+                <label>First Name:</label>
+                <input type="text" name="first_name" placeholder="" required>
 
-        <label>Middle Name:</label>
-        <input type="text" name="middle_name" placeholder="">
+                <label>Middle Name:</label>
+                <input type="text" name="middle_name" placeholder="">
 
-        <br>
-        <br>
-        <label>Gender:</label>
-            <!-- Yes or No radio buttons -->
-            <input type="radio" name="male" value="Male"> Male
-            <input type="radio" name="female" value="Male"> Female
-        <?php
+                <br>
+                <br>
+                <label>Gender:</label>
+                <!-- Male or Yes radio buttons -->
+                <input type="radio" name="male" value="Male"> Male
+                <input type="radio" name="female" value="Male"> Female
+                <?php
         // Print some spaces
         echo "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp";
         ?>
 
-        <label>Date of Birth:</label>
-        <input type="date" name="date_of_birth" required>
-        </fieldset>
-        
-        <br>
-        <br>
-
-        <!--Previous SchoolInformation header enclosed in a box--> 
-        <fieldset>
-            <legend><b>Previous School Information</b></legend>
-
-            <!--Form fields-->
-            <label>Name of Previous School/Municipality:</label>
-            <input type="text" name="name_of_previous_school" placeholder="" required>
-
-            <label>Last date attended:</label>
-            <input type="date" name="last_date_attended" required>
+                <label>Date of Birth:</label>
+                <input type="date" name="date_of_birth" required>
+            </fieldset>
 
             <br>
             <br>
 
-            <label>Name of Previous School:</label>
-            <input type="text" name="name_of_previous_school" placeholder="" required>
+            <!--Previous SchoolInformation header enclosed in a box-->
+            <fieldset>
+                <legend><b>Previous School Information</b></legend>
 
-            <label>Grade at previous school:</label>
-            <input type="text" name="grade_at_previous_school" placeholder="" required>
+                <!--Form fields-->
+                <label>Name of Previous School/Municipality:</label>
+                <input type="text" name="name_of_previous_school" placeholder="" required>
 
-            <br>
-            <br>
+                <label>Last date attended:</label>
+                <input type="date" name="last_date_attended" required>
 
-            <label>Language of Instruction:</label>
-            <input type="text" name="language_of_instruction" placeholder="" required>
+                <br>
+                <br>
 
-            <label>Reason for Transfer:</label>
-            <input type="text" name="reason_for_transfer" placeholder="" required>
-        </fieldset>
+                <label>Name of Previous School:</label>
+                <input type="text" name="name_of_previous_school" placeholder="" required>
 
-        <br>
-        <br>
+                <label>Grade at previous school:</label>
+                <input type="text" name="grade_at_previous_school" placeholder="" required>
 
-        <!--Health Information header enclosed in a box-->
-        <fieldset>
-            <legend><b>Health Information</b></legend>
+                <br>
+                <br>
 
-            <!--Form fields-->
-            <label>Medical Conditions (include information on special equipment or medication, if required:)</label>
-            <!-- Underline form fields -->
-            <br>
-            <textarea name="medical_conditions" rows="5" cols="50" placeholder=""></textarea>
+                <label>Language of Instruction:</label>
+                <input type="text" name="language_of_instruction" placeholder="" required>
 
-            <br>
-            <br>
-            
-            <!-- 
-            <label><b>For School Use</b> <br> Immunization Record provided:</label>
-            <input type="radio" name="immunization_record" value="Yes"> Yes
-            <input type="radio" name="immunization_record" value="No"> No
-            -->
-        </fieldset>
-
-        <br>
-        <br>
-
-        <!--Citizenship Information header enclosed in a box-->
-        <fieldset>
-            <legend><b>Citizenship Information</b></legend>
-
-            <!--Form fields-->
-            <label>Birth Country:</label>
-            <input type="text" name="birth_country" placeholder="" required>
-
-            <label>If Canada, Province of Birth:</label>
-            <input type="text" name="province_of_birth" placeholder="" required>
-
-            <br>
-            <br>
-            <label>Country of Citizenship:</label>
-            <input type="text" name="country_of_citizenship" placeholder="" required>
+                <label>Reason for Transfer:</label>
+                <input type="text" name="reason_for_transfer" placeholder="" required>
+            </fieldset>
 
             <br>
             <br>
 
-            <label>If student not born in Canada, provide date student entered Canada to live for the first time:</label>
-            <input type="date" name="date_student_entered_canada" required>
+            <!--Health Information header enclosed in a box-->
+            <fieldset>
+                <legend><b>Health Information</b></legend>
+
+                <!--Form fields-->
+                <label>Medical Conditions (include information on special equipment or medication, if required:)</label>
+                <!-- Underline form fields -->
+                <br>
+                <textarea name="medical_conditions" rows="5" cols="50" placeholder=""></textarea>
+
+                <br>
+                <br>
+            </fieldset>
 
             <br>
             <br>
 
-            <label><em>For School Use</em>  <b>- Status in Canada:</b></label>
+            <!--Citizenship Information header enclosed in a box-->
+            <fieldset>
+                <legend><b>Citizenship Information</b></legend>
+
+                <!--Form fields-->
+                <label>Birth Country:</label>
+                <input type="text" name="birth_country" placeholder="" required>
+
+                <label>If Canada, Province of Birth:</label>
+                <input type="text" name="province_of_birth" placeholder="" required>
+
+                <br>
+                <br>
+                <label>Country of Citizenship:</label>
+                <input type="text" name="country_of_citizenship" placeholder="" required>
+
+                <br>
+                <br>
+
+                <label>If student not born in Canada, provide date student entered Canada to live for the first
+                    time:</label>
+                <input type="date" name="date_student_entered_canada" required>
+
+                <br>
+                <br>
+
+                <label><em>For School Use</em> <b>- Status in Canada:</b></label>
+                <br>
+                <input type="radio" name="status" value="Canadian Citizen"> Canadian Citizen
+                <input type="radio" name="status" value="Permanent Resident / Landed Immigrant"> Permanent Resident /
+                Landed Immigrant
+                <br>
+                <input type="radio" name="status" value="Study Permit / Student Visa"> Study Permit / Student Visa
+                <input type="radio" name="status" value="Refugee Claimant"> Refugee Claimant
+                <br>
+                <input type="radio" name="status" value="Native Ancestry"> Native Ancestry
+                <br>
+                <input type="radio" name="status" value="Native Ancestry"> Others (specify):
+                <input type="text" name="status" placeholder="">
+
+            </fieldset>
+
             <br>
-            <input type="radio" name="status" value="Canadian Citizen"> Canadian Citizen
-            <input type="radio" name="status" value="Permanent Resident / Landed Immigrant"> Permanent Resident / Landed Immigrant
             <br>
-            <input type="radio" name="status" value="Study Permit / Student Visa"> Study Permit / Student Visa
-            <input type="radio" name="status" value="Refugee Claimant"> Refugee Claimant
-            <br>
-            <input type="radio" name="status" value="Native Ancestry"> Native Ancestry
-            <br>
-            <input type="radio" name="status" value="Native Ancestry"> Others (specify):
-            <input type="text" name="status" placeholder=""> 
 
-        </fieldset>
+            <!--Submit button-->
+            <input type="submit" name="submit" value="Submit">
 
-        <br>
-        <br>
+            <!--Reset button-->
+            <input type="reset" name="reset" value="Reset">
 
-        <!--Submit button-->
-        <input type="submit" name="submit" value="Submit">
+        </form>
 
-        <!--Reset button-->
-        <input type="reset" name="reset" value="Reset">
-
-    </form>
-
-    <?php
+        <?php
     // If the submit button is clicked, then the following code will run
     if (isset($_POST['submit'])) {
         // Declare variables
@@ -258,11 +223,6 @@
         echo "<th>Medical Conditions</th>";
         echo "<td
         style='width: 500px; height: 100px;'>" . $medical_conditions . "</td>";
-        //echo "</tr>";
-        //echo "<tr>";
-        //echo "<th>Immunization Record provided</th>";
-        //echo "<td>" . $immunization_record . "</td>";
-        //echo "</tr>";
         echo "<tr>";
         echo "<th>Birth Country</th>";
         echo "<td>" . $birth_country . "</td>";
