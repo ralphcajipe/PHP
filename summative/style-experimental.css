@@ -1,0 +1,114 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+fieldset {
+  background-color: #9cfcb4;
+  margin: 2em 0;
+  padding: 1em 2em;
+  border: solid 2px green;
+  min-width: 200px;
+  border-radius: 18px;
+}            
+legend {
+    color: #999;
+    padding: 0 .25em;
+}
+label{
+    display: block;
+    margin-top: 1em;
+}
+.checks label{
+    margin-top: 1em;
+}
+label:first-of-type{
+    margin-top: 0;
+}
+input {
+    padding: 0.5em;
+    font-size: 100%;
+    border: solid 2px green;
+    border-radius: 6px;
+}
+input[type="text"]{
+    width: 15em;
+}
+textarea{
+    min-height: 8em;
+    min-width: 100%;
+    padding: .5em;
+    border: solid 2px green;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: vertical;
+    max-height: 200px;
+    border-radius: 6px;
+}
+select {
+    font-size: 100%;
+    cursor: pointer;
+    border-radius: 6px; 
+    padding: 10px;
+    padding-right: 38px;
+    appearance: none;
+    border: solid 2px green;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Adding transition effect */
+    transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+}
+    /* For IE <= 11 */
+select::-ms-expand {
+    display: none; 
+    }
+select:hover, select:focus {
+    color:gold;
+    background-color: green;
+    border: solid 2px white;
+}
+.checks p{
+    margin-bottom: 0;
+}
+.checks{
+    margin-bottom: 1em;
+}
+input[type="radio"] + label{
+    display: inline-block;
+    padding-top: 0;
+    margin-top: 0;
+}
+input[type="radio"]{
+    margin-left: 1.5em;
+    margin-right: 0;
+}
+input[type="radio"]:first-of-type{
+    margin-left: 0;
+}
+button{
+    padding: .5em 1em;
+    border-radius: 6px;
+    background-color: rgb(2, 6, 87);
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+button:hover, button:focus {
+    color: white;
+    background-color:green;
+}
+@media screen and (min-width: 430px) {
+    legend{
+        font-size: 1.75em;                    
+    }
+    fieldset{
+        width: 40%;
+        min-width: 320px;
+        margin: auto;
+    }
+    .checks label{
+        display: inline-block;
+        padding-top: 0;
+        margin-top: 0;
+        margin-right: .5em;
+    }
+}
