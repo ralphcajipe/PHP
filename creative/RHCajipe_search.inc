@@ -23,13 +23,13 @@ if (isset($_GET['word']))
         {
             // Center the result
             echo "<div class='text-center'>";
-            echo "<h3>Found $word</h3>";
+            echo "<h3>✅Found $word in words.txt</h3>";
             echo "</div>";
-            // Provide definition of the word via google search.
+            // Provide definition of the word via bing search.
             echo "<div class='text-center'>";
             echo "<h4>Definition:</h4>";
             echo "<p>";
-            echo "<a href='https://www.google.com/search?q=$word' target='_blank'>";
+            echo "<a href='https://www.bing.com/search?q=$word+definition' target='_blank'>";
             echo "Click here to see the definition of $word";
             echo "</a>";
             echo "</p>";
@@ -38,7 +38,7 @@ if (isset($_GET['word']))
             echo "<div class='text-center'>";
             echo "<h4>Example:</h4>";
             echo "<p>";
-            echo "<a href='https://www.google.com/search?q=$word+example' target='_blank'>";
+            echo "<a href='https://www.bing.com/search?q=$word+example' target='_blank'>";
             echo "Click here to see an example of $word";
             echo "</a>";
             echo "</p>";
@@ -51,7 +51,7 @@ if (isset($_GET['word']))
         {
             // Center the result
             echo "<div class='text-center'>";
-            echo "<h3>\"$word\" cannot be found</h3>";
+            echo "<h3>❌\"$word\" cannot be found</h3>";
             echo "</div>";
             break;
         }
