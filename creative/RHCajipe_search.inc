@@ -59,3 +59,4 @@ if (isset($_GET['word']))
     // Closing the file.
     fclose($file);
 }
+?>
