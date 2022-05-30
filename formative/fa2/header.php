@@ -4,4 +4,3 @@
 
     // Header titled "Naruto Short Stories"
     echo "<center><h1>Naruto Short Stories</h1>";
-?>

@@ -21,8 +21,7 @@
 
     /* Looping through the array and adding, subtracting, multiplying and dividing the values
         of the array. */
-    for ($i = 0; $i < count($array); $i++) 
-    {
+    for ($i = 0; $i < count($array); $i++) {
         $addition += $array[$i];
         $subtraction -= $array[$i];
         $product *= $array[$i];
