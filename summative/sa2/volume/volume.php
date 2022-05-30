@@ -30,7 +30,7 @@
      *
      * The function sphere() takes one parameter, r, and returns the volume of a sphere with radius.
      *
-     * @param s side length for cube.
+     * @param s is side length for cube.
      *
      * @return the volume of the shape.
      */
