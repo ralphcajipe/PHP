@@ -17,7 +17,8 @@
                         </em>
                     </p>
                     <p>
-                        Freelance Python Developer
+                        Freelance Python Developer <br>
+                        2022 - Present
                     </p>
                 </td>
             </tr>
