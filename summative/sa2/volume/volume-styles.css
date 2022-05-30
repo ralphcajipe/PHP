@@ -1,0 +1,24 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+th {
+  text-align: center;
+  background-color: #ccc;
+}
+
+td {
+  text-align: center;
+}
+
+.answer {
+  text-align: right;
+}
+
+.formula {
+  text-align: left;
+}
