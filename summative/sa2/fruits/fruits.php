@@ -23,7 +23,7 @@
             array(
                 "name" => "Banana", "img" => "images/banana.jpg", "description" => "Color Yellow",
                 "facts" => "Bananas are a healthy addition to a balanced diet, as they provide a range of 
-            vital nutrients and are a good fource of fiber."
+            vital nutrients and are a good source of fiber."
             ),
 
             array(
