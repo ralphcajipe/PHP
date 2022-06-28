@@ -1,48 +1,44 @@
-    <!--
-    DogView.php
-    After click the save button from DogRegister.php, information will save to the database.
-    Create separate webpage to show all record of the dog. Please see the example below (DogView.php):
+<html>
 
-    Dog 1
-    Name: <?php echo $row["name"]; ?>
-    Breed: <?php echo $row["breed"]; ?>
-    Age: <?php echo $row["age"]; ?>
-    Address: <?php echo $row["address"]; ?>
-    Color: <?php echo $row["color"]; ?>
-    Height: <?php echo $row["height"]; ?>
-    Weight: <?php echo $row["weight"]; ?>
+<head>
+    <title>DogView.php</title>
+</head>
 
-    If there is another dog, please repeat the above process.
+<body>
+    <h1>🐾 List of Dogs</h1>
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "dog_registration";
 
-    -->
-    <html>
-        <head>
-            <title>Dog View</title>
-        </head>
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT * FROM dog_info";
+    $result = $conn->query($sql);
 
-        <body>
-            <h2>This is DogView.php</h2>
-            <?php
-                // Connect to the database
-                $db = mysqli_connect("localhost", "root", "", "dog_db");
-                // Check connection
-                if (mysqli_connect_errno()) {
-                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                }
-                // Get the data from the database
-                $sql = "SELECT * FROM dog_info";
-                $result = mysqli_query($db, $sql);
-                // Display the data from the database
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "Dog " . $row["id"] . "<br>";
-                    echo "Name: " . $row["name"] . "<br>";
-                    echo "Breed: " . $row["breed"] . "<br>";
-                    echo "Age: " . $row["age"] . "<br>";
-                    echo "Address: " . $row["address"] . "<br>";
-                    echo "Color: " . $row["color"] . "<br>";
-                    echo "Height: " . $row["height"] . "<br>";
-                    echo "Weight: " . $row["weight"] . "<br>";
-                    echo "<br>";
-                }
-            ?>
-    </html>
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while ($row = $result->fetch_assoc()) {
+            echo "<br>Dog " . $row["id"] . ":<br>";
+            echo "Name: " . $row["name"] . "<br>";
+            echo "Breed: " . $row["breed"] . "<br>";
+            echo "Age: " . $row["age"] . "<br>";
+            echo "Address: " . $row["address"] . "<br>";
+            echo "Color: " . $row["color"] . "<br>";
+            echo "Height: " . $row["height"] . "<br>";
+            echo "Weight: " . $row["weight"] . "<br>";
+            echo "--------------------------------<br>";
+        }
+    } else {
+        echo "0 results";
+    }
+    $conn->close();
+    ?>
+</body>
+
+</html>

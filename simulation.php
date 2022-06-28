@@ -1,18 +1,9 @@
-<?php
-
-$s = 70;
-
-if ($s == 80 && $s < 90) 
-{
-    echo "Rank B";
-} 
-else if ($s > 90)
-{
-    echo "Rank A";
-}
-else
-{
-    echo "Rank C";
-}
-
-?>
+<html>
+    <head>Welcome</head>
+    <body>
+        <center>
+            <font size='+2' color='blue'>DevNet Associate </font>
+        </center>
+        <hr>Welcome to the NetAcad DEVASC course!!!<hr>
+    </body>
+</html>
