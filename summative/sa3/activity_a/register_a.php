@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="register_style.css">
+    <link rel="stylesheet" href="register_style_a.css">
     <title>Register</title>
 </head>
 
@@ -146,6 +146,41 @@
         } else {
             echo "<p style='color:red'>Password and Confirm Password are not the same</p>";
         }
+    }
+
+    // Connect to the database
+    $db = new mysqli("localhost", "root", "", "user_registration");
+    
+    // Check if the connection is successful
+    if ($db->connect_error) {
+        die("Connection failed: " . $db->connect_error);
+    }
+
+    // If the submit button is clicked
+    if (isset($_POST['first_name']) 
+    && isset($_POST['middle_name']) 
+    && isset($_POST['last_name']) 
+    && isset($_POST['username']) 
+    && isset($_POST['password']) 
+    && isset($_POST['birthday']) 
+    && isset($_POST['email']) 
+    && isset($_POST['contact_number'])) {
+        // Insert the data into the database
+        $sql = "INSERT INTO user_info (first_name, middle_name, last_name, username, password, 
+        birthday, email, contact_number) 
+        VALUES ('" . $_POST['first_name'] . "', '" . $_POST['middle_name'] . "', '" 
+        . $_POST['last_name'] . "', '" . $_POST['username'] . "', '" . $_POST['password'] . "', '" 
+        . $_POST['birthday'] . "', '" . $_POST['email'] . "', '" . $_POST['contact_number'] . "')";
+
+        // Check if the query is successful
+        if ($db->query($sql) === TRUE) {
+            echo "<p>New record created successfully</p>";
+        } else {
+            echo "<p>Error: " . $sql . "<br>" . $db->error . "</p>";
+        }
+    
+        // Close the connection
+        $db->close();
     }
     ?>
 </body>
