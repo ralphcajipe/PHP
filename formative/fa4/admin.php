@@ -38,6 +38,7 @@ ID Email Username Password Userlevel Status
 Note: Back link will go back to admin.php
 
 -->
+
 <body>
     <h1>Admin Account</h1>
     <p><a href="logout.php">Log out</a></p>
@@ -63,14 +64,17 @@ Note: Back link will go back to admin.php
 
         // Get the email of the user who is logged in
         echo "<b>Email:</b>" . $row['email'] . "<br>";
-        
     }
     ?>
-    <img src="img/user.png" alt="user">
-    <form action="admin_add.php" method="post">
-        <input type="file" name="image">
-        <input type="submit" name="submit" value="Choose File">
+    <img src="img/user.jpg" alt="user.jpg" srcset="">
+    <!---
+    Create PHP file function to upload image for the admin/user.
+    -->
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" name="submit" value="Upload">
     </form>
+
     <h1>Reset Password</h1>
     <form action="admin_add.php" method="post">
         <p>Enter current password: <input type="text" name="current_password"></p>
@@ -83,33 +87,33 @@ Note: Back link will go back to admin.php
 </html>
 
 <?php
-    // Connect to the database
-    $conn = mysqli_connect("localhost", "root", "", "users_db");
-    
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    
-    // If the submit button is clicked
-    if (isset($_POST['submit'])) {
-        // Get the data from the form
-        $current_password = $_POST['current_password'];
-        $new_password = $_POST['new_password'];
-        $re_new_password = $_POST['re_new_password'];
-        
-        // Insert the data into the database
-        $sql = "UPDATE users SET password = '$new_password' WHERE password = '$current_password'";
-        $result = mysqli_query($conn, $sql);
-        
-        // Print result message
-        if ($result) {
-            echo "Password changed successfully";
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
-    }
+// Connect to the database
+$conn = mysqli_connect("localhost", "root", "", "users_db");
 
-    // Close the connection
-    mysqli_close($conn);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// If the submit button is clicked
+if (isset($_POST['submit'])) {
+    // Get the data from the form
+    $current_password = $_POST['current_password'];
+    $new_password = $_POST['new_password'];
+    $re_new_password = $_POST['re_new_password'];
+
+    // Insert the data into the database
+    $sql = "UPDATE users SET password = '$new_password' WHERE password = '$current_password'";
+    $result = mysqli_query($conn, $sql);
+
+    // Print result message
+    if ($result) {
+        echo "Password changed successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+}
+
+// Close the connection
+mysqli_close($conn);
 ?>

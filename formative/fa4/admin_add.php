@@ -28,8 +28,8 @@ Note: Back link will redirect to admin.php
         <p>Email: <input type="text" name="email"></p>
         <p>Username: <input type="text" name="username"></p>
         <p>Password: <input type="text" name="password"></p>
-        <p>Userlevel: <input type="text" name="userlevel"></p>
-        <p>Status: <input type="text" name="status"></p>
+        <p>Userlevel: <input type="text" name="userlevel" placeholder="admin/user"></p>       
+        <p>Status: <input type="text" name="status" placeholder="active/disable"></p>
         <p><input type="submit" name="submit" value="Save Record"></p>
     </form>
 </body>
@@ -68,5 +68,5 @@ Note: Back link will redirect to admin.php
 
     // Close the connection
     mysqli_close($conn);
-    
+
 ?>
